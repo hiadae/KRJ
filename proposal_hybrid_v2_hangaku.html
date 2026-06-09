@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>暮らしの診療所 様 | 半額スタートプラン</title>
-<meta name="description" content="最初の3ヶ月を半額でスタート。半額の間は仕事量を半分・期間を倍に。お支払いは『3ヶ月半額→4ヶ月目以降1.5倍』。暮らしの診療所様向け 半額プランのご案内。">
+<title>暮らしの診療所 様 | 半額プラン</title>
+<meta name="description" content="通常プランの半額で進める「半額プラン」。月あたりの仕事量を半分・立ち上げ期間を倍に。期間の区切りなく、ずっと半額。暮らしの診療所様向けのご案内。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet">
@@ -128,6 +128,23 @@ section.block{padding:90px 24px;}
 @media(max-width:680px){.pay-arrow{transform:rotate(90deg);}}
 .pay-note{margin-top:22px;font-size:13px;color:rgba(255,255,255,.7);}
 
+/* 媒体ローンチ・タイムライン */
+.lt{max-width:880px;margin:40px auto 0;background:#fff;border-radius:18px;padding:30px;box-shadow:var(--shadow);}
+.lt h4{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--dark);margin-bottom:6px;text-align:center;}
+.lt .lt-sub{text-align:center;font-size:13px;color:var(--text-light);margin-bottom:24px;}
+.lt-plan{margin-bottom:24px;}
+.lt-plan:last-child{margin-bottom:0;}
+.lt-plan-name{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.lt-plan-name .tag{font-size:11px;font-weight:700;padding:3px 12px;border-radius:50px;color:#fff;}
+.lt-flow{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;}
+.lt-step{flex:1;min-width:150px;border-radius:14px;padding:14px 16px;}
+.lt-step .mo{font-size:12px;font-weight:700;letter-spacing:.3px;margin-bottom:4px;}
+.lt-step .md{font-size:13px;line-height:1.5;color:var(--text);}
+.lt-step.a{background:#f0f7f2;border:1px solid #bfe3cd;}.lt-step.a .mo{color:var(--primary-dark);}
+.lt-step.b{background:#fff3ec;border:1px solid #ffd2bd;}.lt-step.b .mo{color:var(--accent);}
+.lt-arrow{display:flex;align-items:center;color:#c4ccc8;font-weight:900;font-size:18px;}
+@media(max-width:640px){.lt-arrow{transform:rotate(90deg);}.lt-step{min-width:100%;}}
+
 /* 注意 callout */
 .callout{max-width:820px;margin:50px auto 0;background:#fff7f3;border:1px solid #ffd9c7;border-radius:18px;padding:26px 30px;}
 .callout h4{color:var(--accent);font-size:16px;margin-bottom:8px;}
@@ -167,12 +184,12 @@ section.block{padding:90px 24px;}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">半額スタートプラン ─ 2026</div>
-    <h1 class="hero-title"><span class="hl">3ヶ月</span> 半額スタート</h1>
+    <div class="hero-badge">半額プラン ─ 2026</div>
+    <h1 class="hero-title"><span class="hl">半額</span>プラン</h1>
     <p class="hero-sub">
-      最初の3ヶ月を<b style="color:#fff">半額</b>で。<br>
-      その間は<b style="color:#fff">仕事量を半分・期間を倍</b>に調整します。<br>
-      お支払いは「3ヶ月半額 → 4ヶ月目以降1.5倍」。
+      通常プランの<b style="color:#fff">半額</b>で進めるプランです。<br>
+      月あたりの<b style="color:#fff">仕事量を半分・立ち上げ期間を倍</b>にして、じっくり着実に。<br>
+      期間の区切りはなく、<b style="color:#fff">ずっと半額</b>です。
     </p>
     <a href="#logic" class="hero-cta">プラン内容を見る →</a>
   </div>
@@ -183,11 +200,11 @@ section.block{padding:90px 24px;}
   <div class="section-inner">
     <div class="section-label">HOW IT WORKS</div>
     <h2 class="section-title">半額の仕組み ─ 分量は半分、期間は倍</h2>
-    <p class="section-desc">月あたりの稼働を半分にする。だから成果物に到達するまでの期間は約2倍。4ヶ月目以降は通常額（1.5倍）に戻し、ペースも本来の速度へ。</p>
+    <p class="section-desc">月あたりの稼働を半分にするぶん、成果物に到達するまでの期間は約2倍かかります。そのかわり月額はずっと通常の半額。期間の区切りや値上げはありません。</p>
     <div class="logic-grid">
       <div class="logic-card" data-animate><div class="ln">½</div><h4>分量は半分</h4><p>月あたりの稼働量・アウトプットを<strong>半分</strong>に。SNSなら<strong>6媒体→3媒体</strong>、コンテンツは<strong>180本→90本/月</strong>。</p></div>
       <div class="logic-card" data-animate><div class="ln">×2</div><h4>期間は倍</h4><p>通常ペースで「1ヶ月でやる範囲」を<strong>2ヶ月</strong>かけて構築。つまり<strong>3ヶ月の半額期間 ≒ 通常1.5ヶ月分</strong>の仕事量。</p></div>
-      <div class="logic-card" data-animate><div class="ln">↑</div><h4>4ヶ月目から本来ペース</h4><p>通常額（<strong>1.5倍</strong>）に戻り、<strong>本来のペース</strong>で残りの媒体・施策を一気に展開します。</p></div>
+      <div class="logic-card" data-animate><div class="ln">∞</div><h4>ずっと半額</h4><p>期間の縛りはありません。月額は<strong>通常の半額のまま</strong>。「○ヶ月目から通常額」も値上げもなく、じっくり継続します。</p></div>
     </div>
 
     <div class="bar-wrap" data-animate>
@@ -225,6 +242,32 @@ section.block{padding:90px 24px;}
         下段3媒体への拡張は、通常額に戻る4ヶ月目以降から。<br>
         いずれも、<b>Claudeに窪田社長の思想・相続/家計の知見を学習させ</b>、AIが生成〜投稿まで自動で回します。
       </div>
+
+      <!-- 媒体ローンチ・タイムライン -->
+      <div class="lt">
+        <h4>各媒体は、いつから回す？</h4>
+        <p class="lt-sub">期間が倍になるぶん、残り3媒体の投入時期も倍にずれます（通常 2ヶ月目 → 半額 4ヶ月目）。</p>
+
+        <div class="lt-plan">
+          <div class="lt-plan-name"><span class="tag" style="background:var(--primary);">通常ペース</span> 1ヶ月で立ち上げ</div>
+          <div class="lt-flow">
+            <div class="lt-step a"><div class="mo">1ヶ月目</div><div class="md">YouTube／Instagram／LINE の3媒体を稼働</div></div>
+            <div class="lt-arrow">→</div>
+            <div class="lt-step a"><div class="mo">2ヶ月目〜</div><div class="md">＋ X／Facebook／ブログSEO を追加 → <b>6媒体フル</b></div></div>
+          </div>
+        </div>
+
+        <div class="lt-plan">
+          <div class="lt-plan-name"><span class="tag" style="background:var(--accent);">半額（期間×2）</span> 2ヶ月かけて立ち上げ</div>
+          <div class="lt-flow">
+            <div class="lt-step b"><div class="mo">1〜2ヶ月目</div><div class="md">YouTube／Instagram／LINE の3媒体を稼働（半額・90本/月）</div></div>
+            <div class="lt-arrow">→</div>
+            <div class="lt-step b"><div class="mo">3ヶ月目</div><div class="md">3媒体の運用・改善（半額）</div></div>
+            <div class="lt-arrow">→</div>
+            <div class="lt-step b"><div class="mo">4ヶ月目〜</div><div class="md">＋ X／Facebook／ブログSEO を追加 → <b>6媒体フル</b>（半額のまま）</div></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="callout" data-animate>
       <h4>⚠️ 「自動投稿するだけ」にはしません</h4>
@@ -247,15 +290,15 @@ section.block{padding:90px 24px;}
         <div class="price-name">まるごとお任せ</div>
         <div class="price-normal">通常 月100,000円</div>
         <div class="price-amount">¥50,000<span>/月（税別）</span></div>
-        <div class="price-period">半額期間（最初の3ヶ月）</div>
-        <div class="price-block-label">＝ 半額の間にやること</div>
+        <div class="price-period">ずっと半額（期間の縛りなし）</div>
+        <div class="price-block-label">＝ まず取り組む範囲（1〜3ヶ月目）</div>
         <ul class="price-features">
           <li><span class="check">✓</span>SNS自動化 <b>3媒体</b>（YT/IG/LINE）・90本/月</li>
           <li><span class="check">✓</span>メタ／Google広告の「来店転換」改善</li>
           <li><span class="check">✓</span>LINE 850人を3層セグメント・相談動線づくり</li>
           <li><span class="check">✓</span>現地はWEBで代替（社長価値観の学習も開始）</li>
         </ul>
-        <div class="price-later"><b>4ヶ月目以降（通常額/1.5倍＝月15万）：</b>残り3媒体（X/FB/ブログSEO）へ拡張・HP移植・現地訪問の本格稼働。1ヶ月分を2ヶ月かけて積み上げ。</div>
+        <div class="price-later"><b>4ヶ月目以降（半額のまま）：</b>残り3媒体（X/FB/ブログSEO）へ拡張・HP移植・現地訪問。半分ペースで、じっくり積み上げます。</div>
       </div>
 
       <!-- B -->
@@ -264,15 +307,15 @@ section.block{padding:90px 24px;}
         <div class="price-name">まず投資対効果を上げる</div>
         <div class="price-normal">通常 月75,000円</div>
         <div class="price-amount">¥37,500<span>/月（税別）</span></div>
-        <div class="price-period">半額期間（最初の3ヶ月）</div>
-        <div class="price-block-label">＝ 半額の間にやること</div>
+        <div class="price-period">ずっと半額（期間の縛りなし）</div>
+        <div class="price-block-label">＝ まず取り組む範囲（1〜3ヶ月目）</div>
         <ul class="price-features">
           <li><span class="check">✓</span>広告を<b>1媒体ずつ</b>改善（メタ→検索の順）</li>
           <li><span class="check">✓</span>改善サイクルは月1回（通常は月2回）</li>
           <li><span class="check">✓</span>LP→LINE友だち追加の導線チューニング</li>
           <li><span class="check">✓</span>LP移植はメタ広告分のみ</li>
         </ul>
-        <div class="price-later"><b>4ヶ月目以降：</b>検索広告分のLP移植・本格チューニング、媒体拡大・コンテンツ自動化へ。</div>
+        <div class="price-later"><b>4ヶ月目以降（半額のまま）：</b>検索広告分のLP移植・本格チューニング、媒体拡大・コンテンツ自動化へ。じっくり継続します。</div>
       </div>
 
       <!-- C -->
@@ -281,15 +324,15 @@ section.block{padding:90px 24px;}
         <div class="price-name">相談先だけ持っておく</div>
         <div class="price-normal">通常 月50,000円</div>
         <div class="price-amount">¥25,000<span>/月（税別）</span></div>
-        <div class="price-period">半額期間（最初の3ヶ月）</div>
-        <div class="price-block-label">＝ 半額の間にやること</div>
+        <div class="price-period">ずっと半額（期間の縛りなし）</div>
+        <div class="price-block-label">＝ まず取り組む範囲（1〜3ヶ月目）</div>
         <ul class="price-features">
           <li><span class="check">✓</span>壁打ち・改善提案を<b>隔月（2ヶ月に1回）</b></li>
           <li><span class="check">✓</span>または月1回×時間半分</li>
           <li><span class="check">✓</span>宿題（提案書・分析）の量も半分</li>
           <li><span class="check">✓</span>施策の実行は御社側、私は伴走のみ</li>
         </ul>
-        <div class="price-later"><b>4ヶ月目以降：</b>定例を毎月に戻し、私が手を動かす実装も巻き取り。半年分のロードマップを本来ペースで。</div>
+        <div class="price-later"><b>4ヶ月目以降（半額のまま）：</b>ご要望に応じて実装の伴走も追加。隔月ペースを基本に、じっくり継続します。</div>
       </div>
 
     </div>
@@ -306,8 +349,8 @@ section.block{padding:90px 24px;}
     <table class="scope-table" data-animate>
       <thead>
         <tr>
-          <th class="now">半額の間にやること</th>
-          <th class="later">4ヶ月目以降にやること（通常額・1.5倍）</th>
+          <th class="now">まず取り組むこと（1〜3ヶ月目）</th>
+          <th class="later">4ヶ月目以降にやること（半額のまま）</th>
         </tr>
       </thead>
       <tbody>
@@ -333,43 +376,41 @@ section.block{padding:90px 24px;}
 <section class="block alt" id="payment">
   <div class="section-inner">
     <div class="section-label">PAYMENT</div>
-    <h2 class="section-title">お支払い条件</h2>
-    <p class="section-desc">窪田社長からご提案いただいた「3ヶ月半額 → 4ヶ月目以降1.5倍」、そのままお受けします。半年で帳尻が合う形です。</p>
+    <h2 class="section-title">お支払い</h2>
+    <p class="section-desc">期間を区切らず、ずっと通常プランの半額。値上げや「○ヶ月目から通常額」はありません。そのぶん、ゆっくり着実に進めます。</p>
     <div class="pay" data-animate>
-      <h3>3ヶ月 半額 → 4ヶ月目以降 1.5倍</h3>
+      <h3>ずっと半額 ─ 月額（税別）</h3>
       <div class="pay-flow">
         <div class="pay-step">
-          <div class="ph">1〜3ヶ月目</div>
-          <div class="am">½</div>
-          <div class="nt">半額・半分ペース<br>（A案なら月5万）</div>
+          <div class="ph">PLAN A フルサポート</div>
+          <div class="am">¥50,000</div>
+          <div class="nt">通常 月10万 → 半額 ／ 月</div>
         </div>
-        <div class="pay-arrow">→</div>
         <div class="pay-step">
-          <div class="ph">4ヶ月目以降</div>
-          <div class="am">×1.5</div>
-          <div class="nt">通常額の1.5倍・本来ペース<br>（A案なら月15万）</div>
+          <div class="ph">PLAN B 広告・導線</div>
+          <div class="am">¥37,500</div>
+          <div class="nt">通常 月7.5万 → 半額 ／ 月</div>
         </div>
-        <div class="pay-arrow">→</div>
         <div class="pay-step">
-          <div class="ph">半年後の目安</div>
-          <div class="am">✓</div>
-          <div class="nt">成果が出れば自走化<br>ノウハウは御社に残る</div>
+          <div class="ph">PLAN C アドバイザリー</div>
+          <div class="am">¥25,000</div>
+          <div class="nt">通常 月5万 → 半額 ／ 月</div>
         </div>
       </div>
-      <div class="pay-note">※ 金銭面はネックにせず、純粋に「どの範囲で一緒にやるか」でお選びいただけます。</div>
+      <div class="pay-note">※ 別途、広告費・AIツール費・API利用料などの実費がかかります（プランに関わらず、かかった分のみ）。</div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-  <div class="cta-title">まずは「どの案で、半額のうちに何を動かすか」を<br>ご一緒に決めさせてください。</div>
+  <div class="cta-title">まずは「どの案で進めるか」を<br>ご一緒に決めさせてください。</div>
   <div class="cta-sub">ご質問・ご要望があれば、何なりとお気軽にお申し付けください。</div>
   <a href="proposal_hybrid_v2.html" class="cta-button">通常版プロポーザルを見る →</a>
 </section>
 
 <footer class="footer">
-  暮らしの診療所（中原興業株式会社）様 ｜ 半額スタートプラン ご提案 ｜ 難波秀行<br>
+  暮らしの診療所（中原興業株式会社）様 ｜ 半額プラン ご案内 ｜ 難波秀行<br>
   <a href="index.html">提案ポータル</a> ・ <a href="proposal_hybrid_v2.html">通常版プロポーザル</a> ・ <a href="automation-portfolio.html">自動化ポートフォリオ</a>
 </footer>
 
