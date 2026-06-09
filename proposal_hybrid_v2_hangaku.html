@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>暮らしの診療所 様 | 半額スタートプラン ─ いただいた分だけ、正直にやる。</title>
+<meta name="description" content="3ヶ月半額スタート。半額の間は仕事量も半分・期間は倍。お金と仕事量がぴったり対応する、暮らしの診療所様向け 半額プランのご提案。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#009944; --primary-dark:#006B30; --primary-light:#00C853;
+  --accent:#FF6B35; --accent2:#1A73E8;
+  --dark:#1a1a2e; --darker:#0f0f1a;
+  --text:#2d3436; --text-light:#636e72;
+  --bg:#fafbfc; --white:#ffffff; --gold:#FFD700;
+  --gradient-primary:linear-gradient(135deg,#009944,#00C853);
+  --gradient-dark:linear-gradient(135deg,#1a1a2e,#16213e);
+  --gradient-accent:linear-gradient(135deg,#FF6B35,#FF8F65);
+  --shadow:0 10px 40px rgba(0,0,0,0.08);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--bg);line-height:1.85;overflow-x:hidden;}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.05);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Noto Serif JP',serif;font-weight:700;color:var(--primary-dark);font-size:17px;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:22px;list-style:none;}
+.nav-links a{text-decoration:none;color:var(--text-light);font-size:13px;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--primary);}
+@media(max-width:820px){.nav-links{display:none;}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--gradient-dark);position:relative;overflow:hidden;padding:120px 24px 80px;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(0,200,83,.18),transparent 55%),radial-gradient(circle at 75% 70%,rgba(255,107,53,.12),transparent 50%);}
+.hero-content{position:relative;z-index:2;max-width:880px;}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:#fff;padding:8px 22px;border-radius:50px;font-size:13px;letter-spacing:1px;margin-bottom:28px;}
+.hero-title{font-family:'Noto Serif JP',serif;font-weight:900;color:#fff;font-size:clamp(30px,6vw,58px);line-height:1.4;margin-bottom:24px;}
+.hero-title .hl{color:var(--primary-light);}
+.hero-sub{color:rgba(255,255,255,0.78);font-size:clamp(15px,2.2vw,19px);margin-bottom:40px;}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--primary-dark);padding:16px 42px;border-radius:50px;text-decoration:none;font-weight:700;font-size:16px;transition:transform .3s,box-shadow .3s;box-shadow:0 8px 30px rgba(0,0,0,.25);}
+.hero-cta:hover{transform:translateY(-3px);}
+
+/* SECTION base */
+section.block{padding:90px 24px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-label{font-size:12px;font-weight:700;letter-spacing:3px;color:var(--primary);text-align:center;margin-bottom:12px;}
+.section-title{font-family:'Noto Serif JP',serif;font-weight:700;font-size:clamp(24px,4vw,38px);text-align:center;color:var(--dark);line-height:1.5;margin-bottom:16px;}
+.section-desc{text-align:center;color:var(--text-light);font-size:15px;max-width:720px;margin:0 auto 50px;}
+.alt{background:linear-gradient(180deg,#f0f4f0 0%,#fff 100%);}
+
+/* 哲学 card */
+.philo{max-width:860px;margin:0 auto;background:var(--white);border-radius:24px;padding:48px;box-shadow:var(--shadow-lg);border-top:5px solid var(--primary);}
+.philo h3{font-family:'Noto Serif JP',serif;font-size:clamp(22px,3.4vw,30px);color:var(--primary-dark);line-height:1.6;margin-bottom:20px;text-align:center;}
+.philo p{font-size:15px;color:var(--text);margin-bottom:14px;}
+.philo .quote{margin-top:26px;background:#f0f7f2;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:20px 24px;font-family:'Noto Serif JP',serif;font-size:17px;color:var(--dark);line-height:1.8;}
+
+/* 期間ロジック */
+.logic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:10px;}
+@media(max-width:760px){.logic-grid{grid-template-columns:1fr;}}
+.logic-card{background:var(--white);border-radius:18px;padding:30px 26px;box-shadow:var(--shadow);position:relative;overflow:hidden;}
+.logic-card .ln{font-size:42px;font-weight:900;color:var(--primary-light);line-height:1;opacity:.25;position:absolute;top:14px;right:20px;}
+.logic-card h4{font-size:17px;color:var(--dark);margin-bottom:10px;}
+.logic-card p{font-size:14px;color:var(--text-light);}
+.logic-card strong{color:var(--primary-dark);}
+.bar-wrap{max-width:780px;margin:44px auto 0;background:#fff;border-radius:18px;padding:30px;box-shadow:var(--shadow);}
+.bar-row{margin-bottom:18px;}
+.bar-row:last-child{margin-bottom:0;}
+.bar-label{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:6px;display:flex;justify-content:space-between;}
+.bar{height:30px;border-radius:8px;display:flex;align-items:center;padding-left:14px;color:#fff;font-size:12px;font-weight:700;}
+.bar.full{background:var(--gradient-primary);width:50%;}
+.bar.half{background:linear-gradient(135deg,#FF6B35,#FF8F65);width:100%;}
+
+/* SNS主役 */
+.media-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px;}
+.media-chip{padding:10px 20px;border-radius:50px;font-size:14px;font-weight:700;color:#fff;}
+.media-chip.on{box-shadow:0 6px 18px rgba(0,153,68,.3);}
+.media-chip.off{background:#cfd6d3 !important;color:#fff;text-decoration:line-through;opacity:.85;}
+.m-yt{background:#FF0000;}.m-ig{background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCB045);}.m-line{background:#06C755;}
+.m-x{background:#111;}.m-fb{background:#1877F2;}.m-blog{background:#FF6B35;}
+.media-legend{text-align:center;margin-top:22px;font-size:13px;color:var(--text-light);}
+.media-legend b{color:var(--primary-dark);}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px;}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto;}}
+.price-card{background:var(--white);border-radius:24px;padding:34px 30px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.price-card.featured{border:2px solid var(--primary);}
+.price-card.featured::before{content:'おすすめ';position:absolute;top:18px;right:-34px;background:var(--gradient-primary);color:#fff;padding:5px 44px;font-size:11px;font-weight:700;letter-spacing:1px;transform:rotate(45deg);}
+.price-tag{font-size:12px;color:var(--text-light);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.price-name{font-family:'Noto Serif JP',serif;font-size:20px;margin-bottom:18px;color:var(--dark);}
+.price-normal{font-size:14px;color:var(--text-light);text-decoration:line-through;}
+.price-amount{font-size:44px;font-weight:900;color:var(--primary);line-height:1;margin:2px 0 2px;}
+.price-amount span{font-size:14px;font-weight:500;color:var(--text-light);}
+.price-period{font-size:12px;color:var(--accent);font-weight:700;margin-bottom:22px;}
+.price-block-label{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--primary);margin:18px 0 8px;}
+.price-features{list-style:none;padding:0;}
+.price-features li{padding:9px 0;font-size:13.5px;color:var(--text);border-bottom:1px solid #eee;display:flex;align-items:flex-start;gap:9px;}
+.price-features li:last-child{border-bottom:none;}
+.price-features li .check{color:var(--primary);font-weight:700;flex-shrink:0;}
+.price-later{margin-top:14px;background:#f7f8fa;border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--text-light);}
+.price-later b{color:var(--dark);}
+
+/* 線引き表 */
+.scope-table{width:100%;border-collapse:collapse;margin-top:20px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);}
+.scope-table th{padding:16px;font-size:14px;color:#fff;text-align:left;}
+.scope-table th.now{background:var(--primary);}
+.scope-table th.later{background:var(--dark);}
+.scope-table td{padding:14px 16px;font-size:14px;border-bottom:1px solid #eee;vertical-align:top;}
+.scope-table tr:last-child td{border-bottom:none;}
+.scope-table td.now{background:#f3faf5;}
+.scope-table .em{font-weight:700;color:var(--primary-dark);}
+
+/* 支払い */
+.pay{max-width:820px;margin:0 auto;background:var(--gradient-dark);border-radius:24px;padding:44px;color:#fff;text-align:center;}
+.pay h3{font-family:'Noto Serif JP',serif;font-size:24px;margin-bottom:24px;}
+.pay-flow{display:flex;align-items:stretch;justify-content:center;gap:14px;flex-wrap:wrap;}
+.pay-step{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:16px;padding:22px 24px;min-width:200px;flex:1;}
+.pay-step .ph{font-size:12px;color:rgba(255,255,255,.6);letter-spacing:1px;}
+.pay-step .am{font-size:30px;font-weight:900;color:var(--primary-light);margin:6px 0;}
+.pay-step .nt{font-size:12px;color:rgba(255,255,255,.75);}
+.pay-arrow{display:flex;align-items:center;color:var(--primary-light);font-size:24px;font-weight:900;}
+@media(max-width:680px){.pay-arrow{transform:rotate(90deg);}}
+.pay-note{margin-top:22px;font-size:13px;color:rgba(255,255,255,.7);}
+
+/* 注意 callout */
+.callout{max-width:820px;margin:50px auto 0;background:#fff7f3;border:1px solid #ffd9c7;border-radius:18px;padding:26px 30px;}
+.callout h4{color:var(--accent);font-size:16px;margin-bottom:8px;}
+.callout p{font-size:14px;color:var(--text);}
+
+/* CTA */
+.cta-section{background:var(--gradient-primary);text-align:center;padding:80px 28px;}
+.cta-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,3.6vw,34px);color:#fff;margin-bottom:14px;line-height:1.6;}
+.cta-sub{font-size:15px;color:rgba(255,255,255,.85);margin-bottom:36px;}
+.cta-button{display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--primary-dark);padding:17px 46px;border-radius:50px;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 8px 30px rgba(0,0,0,.18);transition:transform .3s;}
+.cta-button:hover{transform:translateY(-3px);}
+
+/* FOOTER */
+.footer{background:var(--darker);color:rgba(255,255,255,.6);text-align:center;padding:40px 24px;font-size:13px;}
+.footer a{color:var(--primary-light);text-decoration:none;}
+
+/* reveal */
+[data-animate]{opacity:0;transform:translateY(28px);transition:all .7s ease;}
+[data-animate].visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">暮らしの診療所 <span>×</span> 難波</div>
+    <ul class="nav-links">
+      <li><a href="#philosophy">考え方</a></li>
+      <li><a href="#logic">半額の仕組み</a></li>
+      <li><a href="#sns">SNS自動化</a></li>
+      <li><a href="#plans">3プラン</a></li>
+      <li><a href="#scope">線引き</a></li>
+      <li><a href="#payment">お支払い</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">半額スタートプラン ─ 2026</div>
+    <h1 class="hero-title"><span class="hl">いただいた分だけ、</span><br>正直にやる。</h1>
+    <p class="hero-sub">
+      「3ヶ月半額」でスタートするなら、その間は<b style="color:#fff">仕事量も半分・期間は倍</b>。<br>
+      安く見せて損をさせるのでも、無理をして痩せ我慢するのでもなく、<br>
+      <b style="color:#fff">払う額と仕事量がぴったり対応する</b>。それが一番フェアだと考えています。
+    </p>
+    <a href="#philosophy" class="hero-cta">考え方を見る →</a>
+  </div>
+</section>
+
+<!-- 哲学 -->
+<section class="block" id="philosophy">
+  <div class="section-inner">
+    <div class="section-label">OUR STANCE</div>
+    <h2 class="section-title">「半額なら、半額分の仕事を。」</h2>
+    <p class="section-desc">過去に外注で「払ったのに動かない／成果も報告もない」を経験された御社だからこそ、お金と仕事量の対応を、最初から透明にしておきたいと考えています。</p>
+    <div class="philo" data-animate>
+      <h3>ペースを落とすだけ。手は抜かない。</h3>
+      <p>「半額にしてほしい」とご相談いただいた場合、私のお返事はシンプルです。<strong>その期間は、稼働ペースを半分に落とします。</strong>そのかわり、半額分のお金だけ頂戴します。</p>
+      <p>「安くしたから雑にやる」のではありません。1ヶ月でやり切る範囲を2ヶ月かけて、丁寧に積み上げる。だから<strong>同じゴールに着くまでの期間は、約2倍</strong>になります。これが「分量＝半分／期間＝倍」の考え方です。</p>
+      <div class="quote">
+        「もらった分だけ、きっちりやります。<br>少なく払えば少なく、しっかり払えばしっかり。<br>ここは正直にやらせてください。」
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 期間ロジック -->
+<section class="block alt" id="logic">
+  <div class="section-inner">
+    <div class="section-label">HOW IT WORKS</div>
+    <h2 class="section-title">半額の仕組み ─ 分量は半分、期間は倍</h2>
+    <p class="section-desc">月あたりの稼働を半分にする。だから成果物に到達するまでの期間は約2倍。4ヶ月目以降は通常額（1.5倍）に戻し、ペースも本来の速度へ。</p>
+    <div class="logic-grid">
+      <div class="logic-card" data-animate><div class="ln">½</div><h4>分量は半分</h4><p>月あたりの稼働量・アウトプットを<strong>半分</strong>に。SNSなら<strong>6媒体→3媒体</strong>、コンテンツは<strong>180本→90本/月</strong>。</p></div>
+      <div class="logic-card" data-animate><div class="ln">×2</div><h4>期間は倍</h4><p>通常ペースで「1ヶ月でやる範囲」を<strong>2ヶ月</strong>かけて構築。つまり<strong>3ヶ月の半額期間 ≒ 通常1.5ヶ月分</strong>の仕事量。</p></div>
+      <div class="logic-card" data-animate><div class="ln">↑</div><h4>4ヶ月目から本気</h4><p>通常額（<strong>1.5倍</strong>）に戻したら、いただく分だけ<strong>本来ペース（むしろ巻き）</strong>で一気に展開します。</p></div>
+    </div>
+
+    <div class="bar-wrap" data-animate>
+      <div class="bar-row">
+        <div class="bar-label"><span>通常プラン（月10万・本気ペース）</span><span>1ヶ月の仕事量</span></div>
+        <div class="bar full">■ 1ヶ月で立ち上げ</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>半額プラン（月5万・半分ペース）</span><span>同じ仕事量に2ヶ月</span></div>
+        <div class="bar half">■■ 2ヶ月かけて立ち上げ（＝対価ぴったり）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SNS主役 -->
+<section class="block" id="sns">
+  <div class="section-inner">
+    <div class="section-label">FOCUS</div>
+    <h2 class="section-title">半額期の主役は「SNSのAI自動化」</h2>
+    <p class="section-desc">窪田社長が一番気にされている「SNSのAI管理」。これを後回しにはしません。フルの6媒体に対し、半額期はちょうど半分の3媒体から回します。</p>
+    <div data-animate>
+      <div class="media-row">
+        <span class="media-chip m-yt on">YouTubeショート</span>
+        <span class="media-chip m-ig on">Instagram</span>
+        <span class="media-chip m-line on">LINE</span>
+      </div>
+      <div class="media-row" style="margin-top:14px;">
+        <span class="media-chip off">X（旧Twitter）</span>
+        <span class="media-chip off">Facebook</span>
+        <span class="media-chip off">ブログSEO</span>
+      </div>
+      <div class="media-legend">
+        <b>半額期：上段3媒体</b>（＝フル6媒体の半分）を自動運用。<b>本数 180本/月 → 90本/月</b>。<br>
+        下段3媒体への拡張は、通常額に戻る4ヶ月目以降から。<br>
+        いずれも、<b>Claudeに窪田社長の思想・相続/家計の知見を学習させ</b>、AIが生成〜投稿まで自動で回します。
+      </div>
+    </div>
+    <div class="callout" data-animate>
+      <h4>⚠️ 「自動投稿するだけ」にはしません</h4>
+      <p>以前ChatGPTで毎日投稿しても反応がゼロだった、というお話を踏まえています。投稿を自動化するだけでは意味がない。だからSNS自動化は、<strong>必ず「来店・LINE相談につなげる導線（広告改善・LINEセグメント配信）」とセット</strong>で設計します。発信が、ちゃんと「会う機会」に変わるところまでが仕事です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3プラン -->
+<section class="block alt" id="plans">
+  <div class="section-inner">
+    <div class="section-label">PLANS</div>
+    <h2 class="section-title">3つの規模 × 半額スタート</h2>
+    <p class="section-desc">「この範囲なら一緒にやる価値がある」と思えるものをお選びください。どの案も〈半額の間にやること〉と〈4ヶ月目以降に動かすこと〉を明記しています。</p>
+    <div class="pricing-grid">
+
+      <!-- A -->
+      <div class="price-card featured" data-animate>
+        <div class="price-tag">PLAN A ／ フルサポート</div>
+        <div class="price-name">まるごとお任せ</div>
+        <div class="price-normal">通常 月100,000円</div>
+        <div class="price-amount">¥50,000<span>/月（税別）</span></div>
+        <div class="price-period">半額期間（最初の3ヶ月）</div>
+        <div class="price-block-label">＝ 半額の間にやること</div>
+        <ul class="price-features">
+          <li><span class="check">✓</span>SNS自動化 <b>3媒体</b>（YT/IG/LINE）・90本/月</li>
+          <li><span class="check">✓</span>メタ／Google広告の「来店転換」改善</li>
+          <li><span class="check">✓</span>LINE 850人を3層セグメント・相談動線づくり</li>
+          <li><span class="check">✓</span>現地はWEBで代替（社長価値観の学習も開始）</li>
+        </ul>
+        <div class="price-later"><b>4ヶ月目以降（通常額/1.5倍＝月15万）：</b>残り3媒体（X/FB/ブログSEO）へ拡張・HP移植・現地訪問の本格稼働。1ヶ月分を2ヶ月かけて積み上げ。</div>
+      </div>
+
+      <!-- B -->
+      <div class="price-card" data-animate>
+        <div class="price-tag">PLAN B ／ 広告・導線フォーカス</div>
+        <div class="price-name">まず投資対効果を上げる</div>
+        <div class="price-normal">通常 月75,000円</div>
+        <div class="price-amount">¥37,500<span>/月（税別）</span></div>
+        <div class="price-period">半額期間（最初の3ヶ月）</div>
+        <div class="price-block-label">＝ 半額の間にやること</div>
+        <ul class="price-features">
+          <li><span class="check">✓</span>広告を<b>1媒体ずつ</b>改善（メタ→検索の順）</li>
+          <li><span class="check">✓</span>改善サイクルは月1回（通常は月2回）</li>
+          <li><span class="check">✓</span>LP→LINE友だち追加の導線チューニング</li>
+          <li><span class="check">✓</span>LP移植はメタ広告分のみ</li>
+        </ul>
+        <div class="price-later"><b>4ヶ月目以降：</b>検索広告分のLP移植・本格チューニング、媒体拡大・コンテンツ自動化へ。</div>
+      </div>
+
+      <!-- C -->
+      <div class="price-card" data-animate>
+        <div class="price-tag">PLAN C ／ 月1アドバイザリー</div>
+        <div class="price-name">相談先だけ持っておく</div>
+        <div class="price-normal">通常 月50,000円</div>
+        <div class="price-amount">¥25,000<span>/月（税別）</span></div>
+        <div class="price-period">半額期間（最初の3ヶ月）</div>
+        <div class="price-block-label">＝ 半額の間にやること</div>
+        <ul class="price-features">
+          <li><span class="check">✓</span>壁打ち・改善提案を<b>隔月（2ヶ月に1回）</b></li>
+          <li><span class="check">✓</span>または月1回×時間半分</li>
+          <li><span class="check">✓</span>宿題（提案書・分析）の量も半分</li>
+          <li><span class="check">✓</span>施策の実行は御社側、私は伴走のみ</li>
+        </ul>
+        <div class="price-later"><b>4ヶ月目以降：</b>定例を毎月に戻し、私が手を動かす実装も巻き取り。半年分のロードマップを本来ペースで。</div>
+      </div>
+
+    </div>
+    <p class="section-desc" style="margin-top:40px;">※ 別途、広告費・AIツール費・API利用料などの実費がかかります（プランに関わらず、かかった分のみ）。詳細は <a href="proposal_hybrid_v2.html#pricing" style="color:var(--primary);font-weight:700;">通常版プロポーザルの費用ページ</a> をご参照ください。</p>
+  </div>
+</section>
+
+<!-- 線引き -->
+<section class="block" id="scope">
+  <div class="section-inner">
+    <div class="section-label">SCOPE LINE</div>
+    <h2 class="section-title">どこまでやる？ ─ 半額期の線引き（A案）</h2>
+    <p class="section-desc">「半額ならここまで、フルに戻したらここから」。会議でこの表を指しながら、率直に線を引かせてください。</p>
+    <table class="scope-table" data-animate>
+      <thead>
+        <tr>
+          <th class="now">半額の間にやる（◯◯と◯◯）</th>
+          <th class="later">4ヶ月目以降＝通常額/1.5倍でやる（△△）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="now"><span class="em">SNSのAI自動化：3媒体</span>（＝フル6媒体の半分）・90本/月＋社長の価値観を学習</td>
+          <td>残り3媒体（X／Facebook／ブログSEO）への拡張</td>
+        </tr>
+        <tr>
+          <td class="now">既存広告の改善・来店転換のボトルネック解消</td>
+          <td>HP移植・LP全面リニューアル</td>
+        </tr>
+        <tr>
+          <td class="now">LINE導線整備・3層セグメント配信</td>
+          <td>現地訪問・撮影・対面イベント設計の本格稼働</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="section-desc" style="margin-top:28px;">半額期は「効果が出やすく、御社が一番困っている所（来店転換とLINEの“あと一歩”）」を先に当てる設計。半額でも“効いた実感”を作れるので、4ヶ月目の通常額移行が自然に進みます。</p>
+  </div>
+</section>
+
+<!-- 支払い -->
+<section class="block alt" id="payment">
+  <div class="section-inner">
+    <div class="section-label">PAYMENT</div>
+    <h2 class="section-title">お支払い条件</h2>
+    <p class="section-desc">窪田社長からご提案いただいた「3ヶ月半額 → 4ヶ月目以降1.5倍」、そのままお受けします。半年で帳尻が合う形です。</p>
+    <div class="pay" data-animate>
+      <h3>3ヶ月 半額 → 4ヶ月目以降 1.5倍</h3>
+      <div class="pay-flow">
+        <div class="pay-step">
+          <div class="ph">1〜3ヶ月目</div>
+          <div class="am">½</div>
+          <div class="nt">半額・半分ペース<br>（A案なら月5万）</div>
+        </div>
+        <div class="pay-arrow">→</div>
+        <div class="pay-step">
+          <div class="ph">4ヶ月目以降</div>
+          <div class="am">×1.5</div>
+          <div class="nt">通常額の1.5倍・本来ペース<br>（A案なら月15万）</div>
+        </div>
+        <div class="pay-arrow">→</div>
+        <div class="pay-step">
+          <div class="ph">半年後の目安</div>
+          <div class="am">✓</div>
+          <div class="nt">成果が出れば自走化<br>ノウハウは御社に残る</div>
+        </div>
+      </div>
+      <div class="pay-note">※ 金銭面はネックにせず、純粋に「どの範囲で一緒にやるか」でお選びいただけます。</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-title">まずは「どの案で、半額のうちに何を動かすか」を<br>ご一緒に決めさせてください。</div>
+  <div class="cta-sub">ご質問・ご要望があれば、何なりとお気軽にお申し付けください。</div>
+  <a href="proposal_hybrid_v2.html" class="cta-button">通常版プロポーザルを見る →</a>
+</section>
+
+<footer class="footer">
+  暮らしの診療所（中原興業株式会社）様 ｜ 半額スタートプラン ご提案 ｜ 難波秀行<br>
+  <a href="index.html">提案ポータル</a> ・ <a href="proposal_hybrid_v2.html">通常版プロポーザル</a> ・ <a href="automation-portfolio.html">自動化ポートフォリオ</a>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.15});
+document.querySelectorAll('[data-animate]').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
